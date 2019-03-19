@@ -4,17 +4,18 @@
       <div class="form-group">
         <input type="text" class="form-control" name="message" placeholder="Enter message..." v-model="NewMessage">
         <p class="text-danger" v-if="errorText">{{ errorText }}</p>
-        <button class="btn btn-primary" type="submit" name="action">Submit <button>
+        <button class="btn btn-primary" type="submit" name="action">Submit </button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
-import fb from "./init.js"
+//import fb from "./firebase/init.js"
+import fb from "@/firebase/init";
 
 export default {
-  name: 'CreateMessage',
+  name: "CreateMessage",
   props: ["name"],
   data() {
     return {
@@ -39,9 +40,8 @@ export default {
         this.errorText = "Text field is empty";
       }
     }
-  },
+  }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

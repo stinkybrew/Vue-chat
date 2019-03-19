@@ -1,5 +1,5 @@
 <template>
-  <div class = "ontainer chat">
+  <div class = "container chat">
     <h2 class="text-primary text-center">Real chat</h2>
     <h5 class="text-secondary text-center">Powered by Vue.js</h5>
     <div class="card">
@@ -25,10 +25,11 @@
 <!-- JavaScript part -->
 <script>
 import CreateMessage from "@/components/CreateMessage";
+import fb from "@/firebase/init";
 import moment from "moment";
 
 export default {
-  name: 'Chat',
+  name: 'chat',
   props: ['name'],
   components: {
     CreateMessage
@@ -51,7 +52,7 @@ export default {
   }, // USE THIS: setInterval(printTime, 1000); TO PRINT TIME STAMP
   
   created() {
-   let ref = fb.collection("messages").orderBy("timestamp");
+   let ref = fb.collection("messages").orderBy("timestamp"); // LOCAL STORAGEEN! ! !
 
     ref.onSnapshot(snapshot => {
       snapshot.docChages().forEach(change => {
@@ -79,7 +80,7 @@ Vue.directive('scroll', {
     }
     window.addEventListener('scroll', f)
   }
-})
+});
 
 
 // MAIN APP
@@ -93,7 +94,7 @@ new Vue({
           'opacity: 1; transform: translate3d(0, -10px, 0)'
         )
       }
-      return window.scrollY > 100
+      return window.scrolly > 100
     }
   }
 }); 

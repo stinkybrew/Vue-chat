@@ -1,5 +1,5 @@
 import Vue from "vue";
-import App from "./Chat.vue";
+import App from "./views/Login.vue";
 import router from "./router";
 
 Vue.config.productionTip = false;
