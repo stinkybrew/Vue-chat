@@ -1,6 +1,6 @@
 <template>
   <div class = "container chat">
-    <h2 class="text-primary text-center">Real chat</h2>
+    <h2 class="text-primary text-center">Real Time Vue-chat vol.2...</h2>
     <h5 class="text-secondary text-center">Powered by Vue.js</h5>
     <div class="card">
       <div class="card-body">
