@@ -2,7 +2,7 @@
     <div class="container">
         <div class="card login">
             <div class="card-body">
-                <h2 class="card-title text-center">Login</h2>
+                <h2 class="card-title text-center">Login to Vuel-chat v.2</h2>
                 <form @submit.prevent="login" class="text-center">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Please enter your name ..." name="name" v-model="name">
