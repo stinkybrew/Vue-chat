@@ -92,12 +92,12 @@ new Vue({
         el.setAttribute(
           'style',
           'opacity: 1; transform: translate3d(0, -10px, 0)'
-        )
+        );
       }
-      return window.scrolly > 100
+      return window.scrolly > 100;
     }
   }
-}); 
+})
 
 </script>
 
