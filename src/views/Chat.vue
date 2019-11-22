@@ -1,6 +1,6 @@
 <template>
   <div class = "container chat">
-    <h2 class="text-primary text-center">Real Time Vue-chat vol.2...</h2>
+    <h2 class="text-primary text-center">Stinkybrew's Vue-chat vol.2...</h2>
     <h5 class="text-secondary text-center">Powered by Vue.js</h5>
     <div class="card">
       <div class="card-body">
@@ -22,15 +22,15 @@
   </div>  
 </template>
 
-<!-- JavaScript part -->
+<!-- JavaScript osio -->
 <script>
 import CreateMessage from "@/components/CreateMessage";
-import fb from "@/firebase/init";
-import moment from "moment";
-
+//import fb from "@/firebase/init";
+//import moment from "moment";
+import Vue from "vue";
 export default {
-  name: 'chat',
-  props: ['name'],
+  name: "chat",
+  props: ["name"],
   components: {
     CreateMessage
   },
@@ -46,18 +46,17 @@ export default {
       var hours = d.getHours();
       var mins = d.getMinutes();
       var secs = d.getSeconds();
-      //document.body.innerHTML = hours+":"+mins+":"+secs;
-      let realtime = hours+":"+mins+":"+secs;
-      //document.body.innerHTML = realtime;  
+      document.body.innerHTML = hours+":"+mins+":"+secs;
+      ////document.body.innerHTML = realtime;  
   }, // USE THIS: setInterval(printTime, 1000); TO PRINT TIME STAMP
   
-  created() {
+ /* created() {
    let ref = fb.collection("messages").orderBy("timestamp"); // LOCAL STORAGEEN! ! !
 
     ref.onSnapshot(snapshot => {
       snapshot.docChages().forEach(change => {
-        if (change.type = "added") {
-          let cod = change.doc;
+        if (change.type = true) {
+          let doc = change.doc;
           this.messages.push({
             id: doc.id,
             name: doc.data().name,
@@ -68,36 +67,38 @@ export default {
 
       });
     });
-  } 
+  } */
 }
 
-Vue.directive('scroll', {
-  inserted: function (el, binding) {
-    let f = function (evt) {
-      if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f)
-      }
-    }
-    window.addEventListener('scroll', f)
-  }
-});
+
 
 
 // MAIN APP
 new Vue({
-	el: '#Chat',
+	el: "#Chat",
   methods: {
     handleScroll: function (evt, el) {
       if (window.scrollY > 50) {
         el.setAttribute(
-          'style',
-          'opacity: 1; transform: translate3d(0, -10px, 0)'
+          "style",
+          "opacity: 1; transform: translate3d(0, -10px, 0)"
         );
       }
       return window.scrolly > 100;
     }
   }
 })
+
+Vue.directive("scroll", {
+  inserted: function (el, binding) {
+    let f = function (evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener("scroll", f)
+      }
+    }
+    window.addEventListener("scroll", f)
+  }
+});
 
 </script>
 

@@ -1,31 +1,30 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Login from "./views/Login.vue";
-import Chat from "@/views/Chat.vue";
+import Chat from "./views/Chat.vue";
 
 Vue.use(Router);
 
 export default new Router({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: "/",
-      name: "login",
-      component: Login
-    },
-    {
-      path: "/chat",
-      name: "chat",
-      component: Chat,
-      props: true,
-      beforeEnter: (to, from, next) => {
-        if (to.params.name) {
-          next();
-        } else {
-          next({name: "Login"})
+    mode: "history",
+    base: process.env.BASE_URL,
+    routes: [{
+            path: "views/Login",
+            name: "Login",
+            component: Login
+        },
+        {
+            path: "views/Chat",
+            name: "Chat",
+            component: Chat,
+            props: true,
+            beforeEnter: (to, from, next) => {
+                if (to.params.name) {
+                    next();
+                } else {
+                    next({ name: "Login" })
+                }
+            }
         }
-      }
-    }
-  ]
+    ]
 });

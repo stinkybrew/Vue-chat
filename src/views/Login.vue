@@ -2,7 +2,7 @@
     <div class="container">
         <div class="card login">
             <div class="card-body">
-                <h2 class="card-title text-center">Login to my Vuel-chat v.2</h2>
+                <h2 class="card-title text-center">Login to my RT_Chat</h2>
                 <form @submit.prevent="login" class="text-center">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Please enter your name ..." name="name" v-model="name">
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import Chat from "./views/Chat.vue";
+//import Vue from "vue";
 export default {
     name: 'login',
     data () {
