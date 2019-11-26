@@ -1,6 +1,6 @@
  // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyAp5VIuPSSfljXitc-AS4sjmCflyNFZbE0",
+    apiKey: "lol",
     authDomain: "chat-a60d0.firebaseapp.com",
     databaseURL: "https://chat-a60d0.firebaseio.com",
     projectId: "chat-a60d0",
