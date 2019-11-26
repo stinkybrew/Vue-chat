@@ -50,7 +50,7 @@ export default {
       ////document.body.innerHTML = realtime;  
   }, // USE THIS: setInterval(printTime, 1000); TO PRINT TIME STAMP
   
- /* created() {
+  created() {
    let ref = fb.collection("messages").orderBy("timestamp"); // LOCAL STORAGEEN! ! !
 
     ref.onSnapshot(snapshot => {
@@ -67,7 +67,7 @@ export default {
 
       });
     });
-  } */
+  } 
 }
 
 
