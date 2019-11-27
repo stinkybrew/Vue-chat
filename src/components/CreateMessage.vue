@@ -26,7 +26,7 @@ export default {
   methods: {
     createMessage () {
       if (this.newMessage) {
-        fb.collection("messages").add( {   // This should collect messages to localstorage ! ! ! EDIT: ON THIS CASE WE ARE USING FIREBASE!
+        fb.collection("messages").add( {  // This should collect messages to localstorage ! ! ! EDIT: ON THIS CASE WE ARE USING FIREBASE!
           message: this.newMessage,
           name: this.name,
           timestamp: Date.now()
