@@ -10,7 +10,7 @@
   "dependencies": {
     "firebase": "^5.5.7",
     "jquery": "^3.5.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "popper.js": "^1.14.4",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
